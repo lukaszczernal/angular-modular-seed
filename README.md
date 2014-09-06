@@ -1,4 +1,4 @@
-grunt-coffee-stylus-jade
+angular-modular-seed
 ========================
 
-HTML5 boilerplate with coffee, stylu and jade. As simple as possible.
+AngularJS seed with modular folder structure
