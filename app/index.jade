@@ -1,0 +1,54 @@
+doctype
+html.no-js
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Artdom Nysa - AGD
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    base(href="/index.html")
+
+    //build:css(bower_components) css/vendor.css
+    //- link(rel='stylesheet', href='normalize-css/normalize.css')
+    link(rel='stylesheet', href='bootstrap/dist/css/bootstrap.css')
+    //endbuild
+
+    link(rel='stylesheet', href='css/application.css')
+
+  body(ng-app="artdomApp")
+    <!--[if lt IE 10]>
+    p Przepraszamy, ale Twoja przeglądarka nie jest jeszcze przez nas wspierana.
+    | Prosimy odwiedzić nas ponownie w niedługim czasie lub skorzystać z innej przeglądarki.
+    p Przeglądarki które aktualnie wspieramy to:
+      ul
+        li Chrome
+        li Firefox
+        li Safari
+        li Opera
+    <![endif]-->
+
+    //- Add your site or application content here
+    div(ng-view="mainView")
+
+    //- script window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')
+    //build:js(bower_components) js/vendor.js
+    script(type='text/javascript', src='jquery/dist/jquery.js')
+    script(type='text/javascript', src='angular/angular.js')
+    script(type='text/javascript', src='angular-route/angular-route.js')
+    script(type='text/javascript', src='jquery.lazyload/jquery.lazyload.js')
+    script(type='text/javascript', src='firebase/firebase.js')
+    script(type='text/javascript', src='firebase-simple-login/firebase-simple-login.js')
+    script(type='text/javascript', src='angularfire/dist/angularfire.js')
+    script(type='text/javascript', src='angular-bootstrap/ui-bootstrap-tpls.js')
+    //endbuild
+    script(src='js/application.js')
+
+    //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+    //-
+      script
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
